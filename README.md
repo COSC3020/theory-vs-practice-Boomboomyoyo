@@ -17,7 +17,7 @@ Add your answers to this markdown file.
 
 1. Asymptotic analysis could be misleading compared to practice in a few different ways. 
 
-    a) For small input sizes, complexity can be misleading because between two input classes, say $\Theta\left(n\right)$ and $\Theta\left(log(n)\right)$, it seems that the first will always be slower than the second. However, the reality might be that the first's complexity is $n$ and the second's is $20logn$ due to the overhead of data structures or processes needed to set up the asymptotically more efficient solution. It won't take terribly long for that overhead to pay off, but if you are only going to be using your algorithm on small input sizes, the asymptotically worse $\Theta\left(n\right)$ may be more efficient to use in practice.
+    a) For small input sizes, complexity can be misleading because between two input classes, say $\Theta\left(n\right)$ and $\Theta\left(log(n)\right)$, it seems that the first will always be slower than the second. However, the reality might be that the first's complexity is $n$ and the second's is $20log_{2}n$ due to the overhead of data structures or processes needed to set up the asymptotically more efficient solution. This is due to the parts of the asymptotic notations definition on constants. Essentially, when we are talking about behaviour as the input size nears infinity, constants aren't going to be important. It won't take terribly long for that overhead to pay off, but if you are only going to be using your algorithm on small input sizes, the asymptotically worse $\Theta\left(n\right)$ may be more efficient to use in practice.
 
     b) For Big $\Omega$ and Big O bounds specifically, they can be misleading because they don't have to be tight asymptotic bounds. In comparison, Big $\Theta$ is quite tightly asymptoticly bounded. For this reason, Big $\Omega$ and Big O bounds can trip up novice programmers if they don't realize the difference.
 
@@ -31,4 +31,4 @@ I would expect the jump in size from 1,000 to 10,000 elements in an index wouldn
 
     b) Secondly, I would have to consider perhaps something about the machine I was running it on was different. Could be different hardware specs, or on the same machine, just different background programs running. 
     
-    c) A third way this could happen is if maybe the implementation of the binary search tree had some built-in restriction in its use I wasn't aware of.
+    c) A third way this could happen is if maybe the implementation of the binary search tree had some built-in restriction in its use I wasn't aware of. For example, maybe the elements I was putting in were strings, and the comparison algorithm it uses for strings specifically is much worse than it would be for intergers or floats. 
