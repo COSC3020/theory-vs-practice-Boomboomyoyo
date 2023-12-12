@@ -21,7 +21,7 @@ Add your answers to this markdown file.
 
     b) For Big $\Omega$ and Big O bounds specifically, they can be misleading because they don't have to be tight asymptotic bounds. In comparison, Big $\Theta$ is quite tightly asymptoticly bounded. For this reason, Big $\Omega$ and Big O bounds can trip up novice programmers if they don't realize the difference.
 
-    c) A third misleading aspect of asymptotic analysis is that just because two algorithms share the same asymptotic complexity of say $nlogn$, one is still likely faster than the other. This is because when considering the asymptotic complexity of an algorithm, we are essentially considering the magnitude of its variables. For example, $3nlogn$ would be more efficient than 100nlogn, but they are still part of the same $\Theta(nlogn)$.
+    c) A third misleading aspect of asymptotic analysis is that it can't actually be used to measure how long an algorithm will take to run, just how long it might take to run compared to other algorithms that do the same task at large input sizes. You can't just plug in an input size into an asymptotic analysis and get a good estimate of how long it would run for those sample sizes.
 
 2. Confirmed with a quick google search that a binary search tree's asymptotic complexity is $\Theta(logn)$ since it essentially divides the problem in half with each comparison.
 
